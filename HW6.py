@@ -7,23 +7,28 @@ print('hello world')
 numlist = [1,2,3,4,5,6,7,8,9]
 print(numlist)
 #2. Sort the list from highest to lowest.
-numlist.sort()
+numlist.sort(reverse=True)
 print(numlist)
 #3. Create an empty list.
 emptylist = []
 print(emptylist)
-#4. Remove the median number from the first list and add it to the second list.
-numlist.pop(4)
+#4. Remove the median number from the first list and add it to the second list.#
+numlistpop = numlist.pop(4)
+emptylist.append(numlistpop)
 print(numlist)
 #5. Remove the first number from the first list and add it to the second list.
-numlist.remove(1)
-emptylist.insert(0,5)
+numlist.pop(0)
+print(numlist)
+emptylist.append(0)
+print(emptylist)
 #6. Print both lists.
 print (emptylist)
 print (numlist)
 #7. Add the two numbers in the second list together and print the results.
 emptylistadded = emptylist[1] + emptylist[0]
 print(emptylistadded)
+#8 Add the sum from #7 to the first list.
+numlist.append(emptylistadded)
 #9. Sort the first list from lowest to highest and print it.
 
 numlist.sort()
