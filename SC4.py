@@ -1,0 +1,27 @@
+#Name: Gavin Merrell
+#Class: 5th Hour
+#Assignment: SC4
+
+#You have been transferred to a new team working on a mobile game that allows you to dress up a
+#model and rate other models in a "Project Runway" style competition.
+
+#They want to start prototyping the rating system and are asking you to make it.
+#This prototype needs to allow the user to input the number of players, let each player rate
+#a single model from 1 to 5, and then give the average score of all of the ratings.
+
+playernum= int(input("enter the number of players"))
+playernum= playernum-1
+r=0
+for i in range(playernum):
+    g=True
+    while g==True:
+        choice=int(input("rate one to five"))
+        if 1 <= choice <=5:
+            r = r+ choice
+            g = not g
+            g =False
+        else :
+            print("invalid input")
+
+b= r/playernum
+print(b)
